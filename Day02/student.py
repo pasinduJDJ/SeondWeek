@@ -26,13 +26,13 @@ def delete_student():
 def save_file():
     with open("students.txt", "w") as file:
         for student in students:
-            file.write(f"{student['name']},{student['marks']}\n")
+            file.write(f"{student['name']},{student['age']}\n")
 
 def load_file():
     with open("students.txt", "r") as file:
         for line in file:
-            name, marks = line.strip().split(",")
-            students.append({"name": name, "marks": int(marks)})
+            name, age = line.strip().split(",")
+            students.append({"name": name, "age": int(age)})
 
 
 while True:
